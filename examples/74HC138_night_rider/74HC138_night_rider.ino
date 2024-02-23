@@ -2,7 +2,7 @@
 //    FILE: 74HC138_night_rider.ino
 //  AUTHOR: Rob Tillaart
 // PURPOSE: test basic behaviour and performance
-//     URL: https://github.com/RobTillaart/74HC138
+//     URL: https://github.com/RobTillaart/
 
 
 #include "74HC138.h"
@@ -20,18 +20,19 @@ void setup()
   Serial.print("LIB_74HC138_VERSION: ");
   Serial.println(LIB_74HC138_VERSION);
 
+  selector.enable();
 }
 
 
 void loop()
 {
-  for (int i = 0; i < 7; i++)
+  for (int i = 0; i < 8; i++)
   {
     Serial.println(selector.getLine());
     selector.nextLine();
     delay(100);
   }
-  for (int i = 0; i < 7; i++)
+  for (int i = 0; i < 8; i++)
   {
     Serial.println(selector.getLine());
     selector.prevLine();

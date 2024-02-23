@@ -8,7 +8,7 @@
 #include "74HC138.h"
 
 
-DEV_74HC138 selector(5,6,7);
+DEV_74HC138 selector(5, 6, 7);
 
 uint8_t line = 0;
 
@@ -19,6 +19,8 @@ void setup()
   Serial.println(__FILE__);
   Serial.print("LIB_74HC138_VERSION: ");
   Serial.println(LIB_74HC138_VERSION);
+
+  selector.enable();
 }
 
 
