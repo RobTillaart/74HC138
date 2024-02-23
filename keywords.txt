@@ -10,6 +10,10 @@ getLine	KEYWORD2
 nextLine	KEYWORD2
 prevLine	KEYWORD2
 
+enable	KEYWORD2
+disable	KEYWORD2
+isEnabled	KEYWORD2
+
 
 # Constants (LITERAL1)
 LIB_74HC138_VERSION	LITERAL1

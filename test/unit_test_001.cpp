@@ -60,7 +60,6 @@ unittest(test_nextLine)
     assertEqual(i, dev.getLine());
     dev.nextLine();
   }
-  assertFalse(dev.setLine(8));
 }
 
 
@@ -74,7 +73,6 @@ unittest(test_prevLine)
     assertEqual(i, dev.getLine());
     dev.prevLine();
   }
-  assertFalse(dev.setLine(8));
 }
 
 

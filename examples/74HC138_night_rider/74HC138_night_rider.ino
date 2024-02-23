@@ -2,7 +2,7 @@
 //    FILE: 74HC138_night_rider.ino
 //  AUTHOR: Rob Tillaart
 // PURPOSE: test basic behaviour and performance
-//     URL: https://github.com/RobTillaart/
+//     URL: https://github.com/RobTillaart/74HC138
 
 
 #include "74HC138.h"
