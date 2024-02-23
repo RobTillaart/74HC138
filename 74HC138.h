@@ -23,6 +23,7 @@ public:
     _pin[1] = pin1;
     _pin[2] = pin2;
     _enable = pinEnable;
+    _line = 0;
 
     for (int i = 0; i < 3; i++)
     {
@@ -39,6 +40,7 @@ public:
 
   DEV_74HC138(uint8_t * pins, uint8_t pinEnable = 255)
   {
+    _line = 0;
     for (int i = 0; i < 3; i++)
     {
       _pin[i] = pins[i];
@@ -99,6 +101,7 @@ public:
 
 private:
   uint8_t _pin[3];
+  uint8_t _enable = 255;
   uint8_t _line = 0;
 
   void _setLine()

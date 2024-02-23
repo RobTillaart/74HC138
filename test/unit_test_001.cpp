@@ -39,12 +39,40 @@ unittest_teardown()
 
 unittest(test_setLine)
 {
-  DEV_74HC138 dev;
+  DEV_74HC138 dev(5, 6, 7);
 
-  for (int i = 0; i < 7; i++)
+  for (int i = 0; i < 8; i++)
   {
     assertTrue(dev.setLine(i));
     assertEqual(i, dev.getLine());
+  }
+  assertFalse(dev.setLine(8));
+}
+
+
+unittest(test_nextLine)
+{
+  DEV_74HC138 dev(5, 6, 7);
+
+  assertTrue(dev.setLine(0));
+  for (int i = 0; i < 8; i++)
+  {
+    assertEqual(i, dev.getLine());
+    dev.nextLine();
+  }
+  assertFalse(dev.setLine(8));
+}
+
+
+unittest(test_prevLine)
+{
+  DEV_74HC138 dev(5, 6, 7);
+
+  assertTrue(dev.setLine(7));
+  for (int i = 7; i > 0; i--)
+  {
+    assertEqual(i, dev.getLine());
+    dev.prevLine();
   }
   assertFalse(dev.setLine(8));
 }
